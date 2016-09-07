@@ -1,0 +1,8 @@
+<template name="feed">
+  {{#each showPictures}}
+    {{#unless this.isUploaded}}
+      {{> FS.UploadProgressBar bootstrap=true}}
+    {{/unless}}
+  {{/each}}  
+
+</template>

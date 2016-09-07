@@ -1,0 +1,20 @@
+<template name='books'>
+  <div id='books'>
+    <div class='page-header'>
+      <h1>
+        <small>{{#if catnotselected}}Books{{else}}{{category}}  Books{{/if}}</small>
+      </h1>
+    </div>
+    <div id='mainContent'>
+      {{#each booklist}}
+        {{>book}}
+      {{else}}
+        {{#if catnotselected}}
+          <div class='page-header'><h1><small>Select a category.</small></h1></div>
+        {{else}}
+          <div class='page-header'><h1><small>No books in this category.</small></h1></div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</template>

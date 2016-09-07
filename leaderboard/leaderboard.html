@@ -1,0 +1,29 @@
+<head>
+    <title>Leaderboard</title>
+</head>
+<body>
+    <h1>Leaderboard</h1>
+    {{> leaderboard}}
+</body>
+
+<template name="leaderboard">
+	<ul>
+	    {{#each player}}
+	        <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+	    {{/each}}
+	</ul>
+
+  <input type = "button" class = "increment" value = " 5 points">
+
+  {{> addPlayerForm}}
+
+</template>
+
+<template name = "addPlayerForm">
+
+  <form>
+    <input type="text" name= "playerName">
+    <input type="submit" name= "Add Player">
+  </form>
+
+</template>
